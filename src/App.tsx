@@ -1,11 +1,16 @@
-import './App.css';
-import Button from '@mui/material/Button';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Main from "./pages/Main";
+import NotFound from "./pages/NotFound";
+import Button from "@mui/material/Button";
 
 function App() {
   return (
-    <div className="App">
-      <Button variant="text">Text</Button>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Main />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
