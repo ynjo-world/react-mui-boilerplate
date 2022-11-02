@@ -1,14 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./components/layout/Layout";
+import BaseLayout from "./layouts/BaseLayout";
 import Main from "./pages/Main";
-import NotFound from "./pages/NotFound";
-import Button from "@mui/material/Button";
+import NotFound from "./pages/status/Status404";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<Layout />}>
+        <Route element={<BaseLayout />}>
           <Route path="/" element={<Main />}></Route>
           <Route path="*" element={<NotFound />}></Route>
         </Route>
